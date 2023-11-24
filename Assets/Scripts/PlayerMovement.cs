@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,7 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private int jumps;
 
     //here in case it needs to be accessed by animations or something
-    public CurrentState CurrentState1 { get => currentState;}
+
+    public CurrentState getCurrentState()
+    {
+        return currentState;
+    }
 
     // Start is called before the first frame update
     private void Start()
