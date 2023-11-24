@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     
     private float dirX; // Horrizontal movement input direction -1 = left, 1 = right, 0 = none.    just checking if i understand this correctly?-jason
     private int jumps;
-    public bool IsFacingRight { get; private set; } //here in case it needs to be accessed by animations or something (currently using it for cinemachine stuff-jason)
+    public bool IsFacingRight { get; private set; }  //avaiable for use in animations or other things that need players direction (im currently using it for cinemachine-jason)
 
 
     [Header("Camera")]
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
+    //here in case it needs to be accessed by animations or something
 
     public CurrentState getCurrentState()
     {
