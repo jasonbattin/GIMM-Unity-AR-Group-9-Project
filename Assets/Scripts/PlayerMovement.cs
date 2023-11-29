@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
+
         #region CAMERA LERP Y DAMPING
         if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
         {
@@ -95,6 +96,11 @@ public class PlayerMovement : MonoBehaviour
         {
             CheckDirectionToFace(dirX > 0);//only call the method if the player is moving left
         }
+
+
+        //moved to fixed update to allow for users to move while jumping/falling
+        //calculate horizontal velocity
+        rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
     }
     public void CheckDirectionToFace(bool isMovingRight)//determins if the player is moving left or right
     {
@@ -239,7 +245,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentState = CurrentState.idle;
         }
-        //calculate horizontal velocity
-        rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+        
+
     }
 }
