@@ -1,4 +1,6 @@
+using System.ComponentModel;
 using UnityEngine;
+using Vuforia;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,9 +12,17 @@ public class PlayerMovement : MonoBehaviour
     public enum CurrentState { idle, walkingLeft, walkingRight, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
     
-    private float dirX;
-
+    private float dirX; // Horrizontal movement input direction -1 = left, 1 = right, 0 = none.    just checking if i understand this correctly?-jason
     private int jumps;
+    public bool IsFacingRight { get; private set; }  //avaiable for use in animations or other things that need players direction (im currently using it for cinemachine-jason)
+
+
+    [Header("Camera")]
+    private CameraFollowObject _cameraFollowObject; //a reference to the CameraFollowObject component on the camera follow object game object
+    [SerializeField] private GameObject _cameraFollowObjectGameObject;  //a reference to the camera follow object game object
+    private float _fallSpeedYDampingChangeThreshold; //the threshold at which the camera will lerp the Y damping when the player is falling
+
+
 
     //here in case it needs to be accessed by animations or something
 
@@ -25,6 +35,15 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // Set the flag indicating the start direction of the player 
+        IsFacingRight = true;
+
+        #region INITIALIZE CAMERA
+        // Get the CameraFollowObject component from the camera follow object game object
+        _cameraFollowObject = _cameraFollowObjectGameObject.GetComponent<CameraFollowObject>();
+        _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
+        #endregion
     }
 
     // Update is called once per frame
@@ -52,8 +71,57 @@ public class PlayerMovement : MonoBehaviour
                 fallState();
                 break;
         }
-        
+
+        #region CAMERA LERP Y DAMPING
+        if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.instance.LerpYDamping(true);
+        }
+        if (rb.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            //reset so it can be called again
+            CameraManager.instance.LerpedFromPlayerFalling = false;
+
+            CameraManager.instance.LerpYDamping(false);
+        }
+        #endregion
     }
+
+    #region NEW CODE USED FOR CAMERA AND SPRITE FLIPPING
+    // Called every physics update, used for movement
+    private void FixedUpdate()
+    {
+        if (dirX != 0) //if were detecting movement, turn the player to face the direction they are moving
+        {
+            CheckDirectionToFace(dirX > 0);//only call the method if the player is moving left
+        }
+    }
+    public void CheckDirectionToFace(bool isMovingRight)//determins if the player is moving left or right
+    {
+        if (isMovingRight != IsFacingRight)
+            Turn();
+    }
+    private void Turn()//turns the player to face the direction they are moving, we use rotation because it changes the transform, which is what the camera offset is based on
+    {
+        // Get the current Euler angles of the player
+        Vector3 currentRotation = transform.rotation.eulerAngles;
+
+        // Create a new rotation vector by adding 180 degrees to the Y-axis component
+        Vector3 newRotation = new Vector3(currentRotation.x, currentRotation.y + 180f, currentRotation.z);
+
+        // Apply the new rotation to the player
+        transform.rotation = Quaternion.Euler(newRotation);
+
+        // Call the turn method on the CameraFollowObject
+        if (_cameraFollowObject != null)
+        {
+            _cameraFollowObject.CallTurn();
+        }
+
+        // Toggle the flag indicating the direction the character is facing
+        IsFacingRight = !IsFacingRight;
+    }
+    #endregion
 
     //checks if can jump, if so, jumps 
     private int jump()
