@@ -4,18 +4,19 @@ using Vuforia;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Animator animator;
+    private Rigidbody2D rb;
     [SerializeField] private int baseSpeed;
     [SerializeField] private int dashPower;
     [SerializeField] private float dashTime; //how long to dash
     private float dashTimer; //time player has been dashing
-    public enum CurrentState { idle, walkingLeft, walkingRight, dash, jump, fall};
+    public enum CurrentState { idle, walking, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
     
     private float dirX; // Horrizontal movement input direction -1 = left, 1 = right, 0 = none.    just checking if i understand this correctly?-jason
     private int jumps;
     public bool IsFacingRight { get; private set; }  //avaiable for use in animations or other things that need players direction (im currently using it for cinemachine-jason)
-
+       
 
     [Header("Camera")]
     private CameraFollowObject _cameraFollowObject; //a reference to the CameraFollowObject component on the camera follow object game object
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         // Set the flag indicating the start direction of the player 
         IsFacingRight = true;
@@ -53,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
         //retrieve horizontal axis
         dirX = Input.GetAxisRaw("Horizontal");
 
+        //Flip(); // Used to flip sprite based on direction player is moving -CP
+
         //switch to run corrisponding code depending on state
         switch (currentState)
         {
-            case CurrentState.walkingLeft:
-            case CurrentState.walkingRight:
+          
+            case CurrentState.walking:
             case CurrentState.idle:
                 idleAndWalkingState();
                 break;
@@ -134,6 +138,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && jumps < 2)
         {
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
             currentState = CurrentState.jump;
             rb.velocity = new Vector2(dirX * baseSpeed, baseSpeed * 2);
             return 1;
@@ -166,6 +175,11 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < -0.01f)
         {
             currentState = CurrentState.fall;
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", true);
         }
 
         //if hasnt double jumped yet, check for jump
@@ -185,6 +199,11 @@ public class PlayerMovement : MonoBehaviour
             //dash will deactivate gravity
             rb.gravityScale = 0;
             rb.velocity = new Vector2(dirX * baseSpeed * dashPower, rb.velocity.y);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", true);
+            animator.SetBool("isFalling", false);
         }
         else
         {
@@ -223,6 +242,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown("left shift"))
         {
             currentState = CurrentState.dash;
+            
+
             return;
         }
 
@@ -233,19 +254,41 @@ public class PlayerMovement : MonoBehaviour
     private void horizontalMovement()
     {
         //base walking/idle on dirX
-        if (dirX > 0)
-        {
-            currentState = CurrentState.walkingRight;
-        }
-        else if (dirX < 0)
-        {
-            currentState = CurrentState.walkingLeft;
+        if (dirX > .1f || dirX < -.1f)
+        { 
+            currentState = CurrentState.walking;
+
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
+
+
         }
         else
         {
             currentState = CurrentState.idle;
+
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
+
         }
-        
+
 
     }
+   /* public void Flip()  // Used to flip sprite based on direction player is moving -CP
+    {
+
+        if (IsFacingRight && dirX < 0f || !IsFacingRight && dirX > 0f)
+        {
+            Vector3 localScale = transform.localScale;
+            IsFacingRight = !IsFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }*/
 }

@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 7e53ea72ecc0b904fadd34517c4ce47a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: C3MO_IdleAnimFinal_Frame_0
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1534
+      width: 152
+      height: 298
+    spriteID: 1b5c5993a277bf043a0ee66e60415baf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1534}
+  - name: C3MO_IdleAnimFinal_Frame_1
+    originalName: 
+    pivot: {x: 0.49374998, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 160
+      height: 298
+    spriteID: 762541f5af55ddb468b74c8a15847554
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: C3MO_IdleAnimFinal_Frame_2
+    originalName: 
+    pivot: {x: 0.47023806, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 168
+      height: 298
+    spriteID: c2f6f1ffffa8c81408187a03ae8602c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: C3MO_IdleAnimFinal_Frame_3
+    originalName: 
+    pivot: {x: 0.49374998, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 616
+      width: 160
+      height: 298
+    spriteID: 79274389a37447346a6a2792738b248d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 616}
+  - name: C3MO_IdleAnimFinal_Frame_4
+    originalName: 
+    pivot: {x: 0.49374998, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 922
+      width: 160
+      height: 298
+    spriteID: de21bccc54e9fc74e835f79d751f0d83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 922}
+  - name: C3MO_IdleAnimFinal_Frame_5
+    originalName: 
+    pivot: {x: 0.49374998, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1228
+      width: 160
+      height: 298
+    spriteID: 370f3b406f3895f47901642e0b2e44bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1228}
+  - name: C3MO_IdleAnimFinal_Frame_6
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 4
+      width: 152
+      height: 298
+    spriteID: c83950eecb36a9b4ea56fdfbe45f746f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 4}
+  - name: C3MO_IdleAnimFinal_Frame_7
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 310
+      width: 152
+      height: 298
+    spriteID: 2da903be8a9c2af41b65b07fdab4adcb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 310}
+  - name: C3MO_IdleAnimFinal_Frame_8
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 616
+      width: 152
+      height: 298
+    spriteID: 89511f4b11ed2684e8b5f2f8f009a9ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 616}
+  - name: C3MO_IdleAnimFinal_Frame_9
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 922
+      width: 152
+      height: 298
+    spriteID: 719b2e55efe42f8478ec9425aef280f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 922}
+  - name: C3MO_IdleAnimFinal_Frame_10
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 1228
+      width: 152
+      height: 298
+    spriteID: 0c7e0c88f58b9e84b8bcec0c25e3c04e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 1228}
+  - name: C3MO_IdleAnimFinal_Frame_11
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 1534
+      width: 152
+      height: 298
+    spriteID: bb305f06445ae454c96719a6fc7cdb3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 1534}
+  - name: C3MO_IdleAnimFinal_Frame_12
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 4
+      width: 152
+      height: 298
+    spriteID: 2539d60ee59b5b546a2a9d9d5015d311
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 4}
+  - name: C3MO_IdleAnimFinal_Frame_13
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 310
+      width: 152
+      height: 298
+    spriteID: 153cb10eacf1a5b4ba661e6a97cc54a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 310}
+  - name: C3MO_IdleAnimFinal_Frame_14
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 616
+      width: 152
+      height: 298
+    spriteID: d22a4d26dfcc26a4cb4da2f352b264f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 616}
+  - name: C3MO_IdleAnimFinal_Frame_15
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 922
+      width: 152
+      height: 298
+    spriteID: a1c1da9c1cb9d834bb0265292ca65f88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 922}
+  - name: C3MO_IdleAnimFinal_Frame_16
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 1228
+      width: 152
+      height: 298
+    spriteID: 923306635754bb14a9f66b21c16ab2e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 1228}
+  - name: C3MO_IdleAnimFinal_Frame_17
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 1534
+      width: 152
+      height: 298
+    spriteID: 8c9c6927a35decc4997a4c6e87dbe9e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 1534}
+  - name: C3MO_IdleAnimFinal_Frame_18
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 4
+      width: 152
+      height: 298
+    spriteID: cde036e7d9c9b514aa29df3a240f1963
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 4}
+  - name: C3MO_IdleAnimFinal_Frame_19
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 310
+      width: 152
+      height: 298
+    spriteID: a7539900d2615d947bacb2ab77f76ed3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 310}
+  - name: C3MO_IdleAnimFinal_Frame_20
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 616
+      width: 152
+      height: 298
+    spriteID: f8c4417ffc956b14da0949ed0a7fd985
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 616}
+  - name: C3MO_IdleAnimFinal_Frame_21
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 922
+      width: 152
+      height: 298
+    spriteID: 0e54a37919f348141b763599fbb1b386
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 922}
+  - name: C3MO_IdleAnimFinal_Frame_22
+    originalName: 
+    pivot: {x: 0.5197368, y: -0.013422819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 500
+      y: 1228
+      width: 152
+      height: 298
+    spriteID: 08e40385c4463d247a6805149c3c2c9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 500, y: 1228}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1489728970
+    name: C3MO_IdleAnimFinal
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: C3MO_IdleAnimFinal_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 1b5c5993a277bf043a0ee66e60415baf
+    - name: C3MO_IdleAnimFinal_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 71
+        y: 4
+        width: 160
+        height: 298
+      spriteId: 762541f5af55ddb468b74c8a15847554
+    - name: C3MO_IdleAnimFinal_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 71
+        y: 4
+        width: 168
+        height: 298
+      spriteId: c2f6f1ffffa8c81408187a03ae8602c3
+    - name: C3MO_IdleAnimFinal_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 71
+        y: 4
+        width: 160
+        height: 298
+      spriteId: 79274389a37447346a6a2792738b248d
+    - name: C3MO_IdleAnimFinal_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 71
+        y: 4
+        width: 160
+        height: 298
+      spriteId: de21bccc54e9fc74e835f79d751f0d83
+    - name: C3MO_IdleAnimFinal_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 71
+        y: 4
+        width: 160
+        height: 298
+      spriteId: 370f3b406f3895f47901642e0b2e44bf
+    - name: C3MO_IdleAnimFinal_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: c83950eecb36a9b4ea56fdfbe45f746f
+    - name: C3MO_IdleAnimFinal_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 2da903be8a9c2af41b65b07fdab4adcb
+    - name: C3MO_IdleAnimFinal_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 89511f4b11ed2684e8b5f2f8f009a9ce
+    - name: C3MO_IdleAnimFinal_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 719b2e55efe42f8478ec9425aef280f4
+    - name: C3MO_IdleAnimFinal_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 0c7e0c88f58b9e84b8bcec0c25e3c04e
+    - name: C3MO_IdleAnimFinal_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: bb305f06445ae454c96719a6fc7cdb3b
+    - name: C3MO_IdleAnimFinal_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 2539d60ee59b5b546a2a9d9d5015d311
+    - name: C3MO_IdleAnimFinal_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 153cb10eacf1a5b4ba661e6a97cc54a1
+    - name: C3MO_IdleAnimFinal_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: d22a4d26dfcc26a4cb4da2f352b264f1
+    - name: C3MO_IdleAnimFinal_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: a1c1da9c1cb9d834bb0265292ca65f88
+    - name: C3MO_IdleAnimFinal_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 923306635754bb14a9f66b21c16ab2e3
+    - name: C3MO_IdleAnimFinal_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 8c9c6927a35decc4997a4c6e87dbe9e0
+    - name: C3MO_IdleAnimFinal_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: cde036e7d9c9b514aa29df3a240f1963
+    - name: C3MO_IdleAnimFinal_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: a7539900d2615d947bacb2ab77f76ed3
+    - name: C3MO_IdleAnimFinal_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: f8c4417ffc956b14da0949ed0a7fd985
+    - name: C3MO_IdleAnimFinal_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 0e54a37919f348141b763599fbb1b386
+    - name: C3MO_IdleAnimFinal_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 71
+        y: 4
+        width: 152
+        height: 298
+      spriteId: 08e40385c4463d247a6805149c3c2c9a
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 300, y: 340}
