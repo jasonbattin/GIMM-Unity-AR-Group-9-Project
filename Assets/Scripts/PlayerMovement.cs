@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int baseSpeed;
     [SerializeField] private int dashPower;
     [SerializeField] private float dashTime; //how long to dash
-    private float dashTimer; //time player has been dashing
+    private float dashTimer = 0; //time player has been dashing
     public enum CurrentState { idle, walking, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
     
@@ -104,7 +104,9 @@ public class PlayerMovement : MonoBehaviour
 
         //moved to fixed update to allow for users to move while jumping/falling
         //calculate horizontal velocity
-        rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+        if (currentState != CurrentState.dash) {
+            rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+        }
     }
     public void CheckDirectionToFace(bool isMovingRight)//determins if the player is moving left or right
     {
@@ -196,9 +198,10 @@ public class PlayerMovement : MonoBehaviour
         dashTimer += Time.deltaTime;
         if (dashTimer < dashTime)
         {
+            Debug.Log("Dashing");
             //dash will deactivate gravity
             rb.gravityScale = 0;
-            rb.velocity = new Vector2(dirX * baseSpeed * dashPower, rb.velocity.y);
+            rb.velocity = new Vector2(dirX * dashPower *baseSpeed, rb.velocity.y);
             animator.SetBool("isRunning", false);
             animator.SetBool("isJumping", false);
             animator.SetBool("isIdle", false);
