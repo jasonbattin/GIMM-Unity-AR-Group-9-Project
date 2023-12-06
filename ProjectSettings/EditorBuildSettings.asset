@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 0f0bf437f40a35147ad1abb2cb4400b9
   - enabled: 1
-    path: Assets/Scenes/platformerGame.unity
+    path: Assets/Scenes/Platformer Game.unity
     guid: eb180a0585176074aa7ae13b88c08dee
   - enabled: 1
     path: Assets/Scenes/AR Camera Scene.unity

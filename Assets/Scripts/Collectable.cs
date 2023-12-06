@@ -9,7 +9,7 @@ public class Collectable : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Destroy(gameObject);
-            Score.currentScore++;
+            Score.updateScore(1);
         }
     }
 }

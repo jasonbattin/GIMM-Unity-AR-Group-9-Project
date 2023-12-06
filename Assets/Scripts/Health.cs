@@ -25,15 +25,14 @@ public class Health : MonoBehaviour
         if(transform.position.y < -10)
         {
             killObject();
-            Score.ResetScore();
-            SceneManager.LoadScene("platformerGame");
+            
         }
     }
 
     // kill object
     private void killObject()
     {
-        if (gameObject.name.Equals("Player"))
+        if (gameObject.tag.Equals("Player"))
         {
             Score.gameOver();
         }
