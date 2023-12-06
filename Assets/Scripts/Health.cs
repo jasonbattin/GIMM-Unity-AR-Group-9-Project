@@ -25,6 +25,8 @@ public class Health : MonoBehaviour
         if(transform.position.y < -10)
         {
             killObject();
+            Score.ResetScore();
+            SceneManager.LoadScene("platformerGame");
         }
     }
 
