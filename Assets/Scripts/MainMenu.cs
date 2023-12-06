@@ -11,17 +11,18 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        Debug.Log("PlayGame method called");
+        LoadNextScene();
+        /*Debug.Log("PlayGame method called");
         videoPlayer.loopPointReached += EndReached; // Subscribe to the event
-        videoPlayer.Play();
+        videoPlayer.Play();*/
     }
 
-    private void EndReached(VideoPlayer vp)
+    /*private void EndReached(VideoPlayer vp)
     {
         Debug.Log("Video finished playing.");
         vp.loopPointReached -= EndReached; // Unsubscribe to avoid this method being called again
         LoadNextScene();
-    }
+    }*/
     void LoadNextScene()
     {
         //todo add logic deciding which scene to load based off AR image target
