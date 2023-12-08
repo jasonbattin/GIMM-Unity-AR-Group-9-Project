@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private int baseSpeed;
     [SerializeField] private int dashPower;
+    [SerializeField] private float jumpPower;
     [SerializeField] private float dashTime; //how long to dash
     private float dashTimer = 0; //time player has been dashing
     public enum CurrentState { idle, walking, dash, jump, fall};
@@ -146,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isDashing", false);
             animator.SetBool("isFalling", false);
             currentState = CurrentState.jump;
-            rb.velocity = new Vector2(dirX * baseSpeed, baseSpeed * 2);
+            rb.velocity = new Vector2(rb.velocity.x, baseSpeed * jumpPower);
             return 1;
         }
         return 0;

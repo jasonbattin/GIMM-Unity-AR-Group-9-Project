@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField] private int currentHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
         {
             killObject();
         }
-        if(transform.position.y < -10)
+        if(transform.position.y < -40)
         {
             killObject();
             
