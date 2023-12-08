@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video; // Include the video namespace
@@ -9,9 +8,9 @@ public class MainMenu : MonoBehaviour
     public VideoPlayer videoPlayer; // Assign this in the inspector with your VideoPlayer
 
 
-    public void PlayGame()
+    public void PlayGame(int scene)
     {
-        LoadNextScene();
+        LoadScene(scene);
         /*Debug.Log("PlayGame method called");
         videoPlayer.loopPointReached += EndReached; // Subscribe to the event
         videoPlayer.Play();*/
@@ -23,10 +22,10 @@ public class MainMenu : MonoBehaviour
         vp.loopPointReached -= EndReached; // Unsubscribe to avoid this method being called again
         LoadNextScene();
     }*/
-    void LoadNextScene()
+    void LoadScene(int scene)
     {
         //todo add logic deciding which scene to load based off AR image target
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(scene);
     }
 
     public void LoadMainMenu()

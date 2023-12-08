@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6182360831718192213}
   - component: {fileID: 7884611415122872732}
   - component: {fileID: 781481514307376921}
+  - component: {fileID: 3525875031824306895}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -104,7 +105,7 @@ MonoBehaviour:
   baseSpeed: 3
   dashPower: 5
   jumpPower: 2
-  dashTime: 1
+  dashTime: 0.5
   _cameraFollowObjectGameObject: {fileID: 0}
 --- !u!50 &7127272150987305887
 Rigidbody2D:
@@ -213,3 +214,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3525875031824306895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450658596225805215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40dd4ecce7a43b47b9a62a33d3707cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashKey: 0
+  jumpKey: 0
+  dirX: 0
+  notUsingInput: 0

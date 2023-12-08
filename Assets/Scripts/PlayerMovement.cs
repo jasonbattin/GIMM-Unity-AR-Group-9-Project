@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpPower;
     [SerializeField] private float dashTime; //how long to dash
     private float dashTimer = 0; //time player has been dashing
+    private ButtonControls buttonControls;
     public enum CurrentState { idle, walking, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
     
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        buttonControls = GetComponent<ButtonControls>();
 
         // Set the flag indicating the start direction of the player 
         IsFacingRight = true;
@@ -54,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //retrieve horizontal axis
-        dirX = Input.GetAxisRaw("Horizontal");
+        dirX = buttonControls.dirX;
 
         //Flip(); // Used to flip sprite based on direction player is moving -CP
 
@@ -139,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
     //checks if can jump, if so, jumps 
     private int jump()
     {
-        if (Input.GetButtonDown("Jump") && jumps < 2)
+        if (buttonControls.jumpKey && jumps < 2)
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isJumping", true);
@@ -199,7 +201,6 @@ public class PlayerMovement : MonoBehaviour
         dashTimer += Time.deltaTime;
         if (dashTimer < dashTime)
         {
-            Debug.Log("Dashing");
             //dash will deactivate gravity
             rb.gravityScale = 0;
             rb.velocity = new Vector2(dirX * dashPower *baseSpeed, rb.velocity.y);
@@ -243,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //if shift is pressed, dash
-        if (Input.GetKeyDown("left shift"))
+        if (buttonControls.dashKey)
         {
             currentState = CurrentState.dash;
             
