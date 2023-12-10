@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
         //calculate horizontal velocity
         if (currentState != CurrentState.dash) {
             rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+
         }
     }
     public void CheckDirectionToFace(bool isMovingRight)//determins if the player is moving left or right
@@ -285,15 +286,15 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
-   /* public void Flip()  // Used to flip sprite based on direction player is moving -CP
-    {
+    /* public void Flip()  // Used to flip sprite based on direction player is moving -CP
+     {
 
-        if (IsFacingRight && dirX < 0f || !IsFacingRight && dirX > 0f)
-        {
-            Vector3 localScale = transform.localScale;
-            IsFacingRight = !IsFacingRight;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }*/
+         if (IsFacingRight && dirX < 0f || !IsFacingRight && dirX > 0f)
+         {
+             Vector3 localScale = transform.localScale;
+             IsFacingRight = !IsFacingRight;
+             localScale.x *= -1f;
+             transform.localScale = localScale;
+         }
+     }*/
 }

@@ -26,7 +26,6 @@ public class ButtonControls : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 jumpKey = true;
-                Debug.Log("jump");
             }
             else
             {
