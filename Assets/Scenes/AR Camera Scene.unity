@@ -280,7 +280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51.416996}
+  m_AnchoredPosition: {x: 0, y: 51.410007}
   m_SizeDelta: {x: 1080, y: 102.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248538713
@@ -548,7 +548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51.41597}
+  m_AnchoredPosition: {x: 0, y: 51.416}
   m_SizeDelta: {x: 1080, y: 102.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &365541009
@@ -1407,7 +1407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -51.40901}
+  m_AnchoredPosition: {x: 0, y: -51.415}
   m_SizeDelta: {x: 1080, y: 102.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402442218
@@ -2061,7 +2061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -51.40801}
+  m_AnchoredPosition: {x: 0, y: -51.409004}
   m_SizeDelta: {x: 1080, y: 102.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893785394
@@ -2301,10 +2301,10 @@ RectTransform:
   - {fileID: 1402442217}
   m_Father: {fileID: 1957329459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1037.174}
-  m_SizeDelta: {x: 0, y: -2074.348}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 102.83002}
+  m_SizeDelta: {x: 2280, y: 205.6521}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985230247
 MonoBehaviour:
@@ -2319,7 +2319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
