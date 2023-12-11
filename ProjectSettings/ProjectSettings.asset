@@ -769,11 +769,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 5f22bc4d-a50f-4626-a55f-94eb35b58316
+  cloudProjectId: 83619256-3c4b-44fb-ac70-1234b421019b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GIMM-Unity-AR-Group-9-Project 2023-11-17_15-24-46
-  organizationId: jasonbattin
+  projectName: GIMM-Unity-AR-Group-9-Project
+  organizationId: chrispdonut
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
