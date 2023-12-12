@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -908,6 +908,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -977,6 +982,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1057,6 +1067,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1125,6 +1140,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1241,7 +1261,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (3)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -1306,6 +1326,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1384,6 +1409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
@@ -1483,6 +1513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1552,6 +1587,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1714,6 +1754,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -1785,7 +1830,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (9)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -1842,6 +1887,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7257e91dfb1eb344fb4a8f195b1db4a5, type: 3}
+--- !u!1001 &563346210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 88.5887
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.032616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336604663401330169, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638214696867738687, guid: 7090ac71aff16ca4db01cd499019b87f,
+        type: 3}
+      propertyPath: m_Name
+      value: EXIT
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7090ac71aff16ca4db01cd499019b87f, type: 3}
 --- !u!4 &580794550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
@@ -1872,6 +1985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
@@ -2284,6 +2402,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -2425,6 +2548,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1100736183}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -2503,6 +2631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
@@ -2601,7 +2734,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (7)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -2675,7 +2808,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (5)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -3086,6 +3219,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -3485,7 +3623,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (6)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -3601,6 +3739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
@@ -4013,6 +4156,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 63265463}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -4093,6 +4241,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -4242,7 +4395,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (4)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -4310,7 +4463,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (2)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -5261,27 +5414,117 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 84, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 85, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 86, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 87, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 88, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 89, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 90, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 91, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 92, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 22
+  - m_RefCount: 27
     m_Data: {fileID: 11400000, guid: 64ed5f83f236bcb42a92c9d24f1670c9, type: 2}
-  - m_RefCount: 20
+  - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: 7360a09b03e603b42a5d1925abbcf693, type: 2}
-  - m_RefCount: 20
+  - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: 019c79e2733570c4db5dbb65c913ba2b, type: 2}
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: 56de3fe52792ac94384456e333e45ce9, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 22
+  - m_RefCount: 27
     m_Data: {fileID: -7452015, guid: bfb1d6df0a11f364cae5217eb18016d3, type: 3}
-  - m_RefCount: 20
+  - m_RefCount: 21
     m_Data: {fileID: -1855446716, guid: bfb1d6df0a11f364cae5217eb18016d3, type: 3}
-  - m_RefCount: 20
+  - m_RefCount: 21
     m_Data: {fileID: 1233579641, guid: bfb1d6df0a11f364cae5217eb18016d3, type: 3}
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data: {fileID: -901034233, guid: bfb1d6df0a11f364cae5217eb18016d3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 80
+  - m_RefCount: 89
     m_Data:
       e00: 1
       e01: 0
@@ -5300,13 +5543,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 80
+  - m_RefCount: 89
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -14, y: -8, z: 0}
-  m_Size: {x: 98, y: 12, z: 1}
+  m_Size: {x: 107, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5401,6 +5644,14 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1452717402}
     m_ColliderPaths:
+    - - X: 930000000
+        Y: 50000000
+      - X: 840000000
+        Y: 50000000
+      - X: 840000000
+        Y: 40000000
+      - X: 930000000
+        Y: 40000000
     - - X: 680000000
         Y: 40000000
       - X: 640000000
@@ -5563,6 +5814,10 @@ CompositeCollider2D:
         Y: -80000000
   m_CompositePaths:
     m_Paths:
+    - - {x: 92.99997, y: 4}
+      - {x: 92.99997, y: 5}
+      - {x: 84, y: 4.999971}
+      - {x: 84.00003, y: 4}
     - - {x: 83.99997, y: 3}
       - {x: 83.99997, y: 4}
       - {x: 79, y: 3.999971}
@@ -5685,7 +5940,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -5767,6 +6022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5839,7 +6099,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -5904,6 +6164,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -5989,6 +6254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6073,7 +6343,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (11)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -6564,6 +6834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6702,7 +6977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887018653}
   m_Layer: 0
-  m_Name: Coins
+  m_Name: Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6752,7 +7027,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (1)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -6820,7 +7095,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (8)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -6891,6 +7166,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 63265463}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -7087,6 +7367,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7150,6 +7435,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1107862468}
     m_Modifications:
+    - target: {fileID: 57624997885566410, guid: c1462472d5ea7fa4691f73308e8d0c31,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5724984452330830801, guid: c1462472d5ea7fa4691f73308e8d0c31,
         type: 3}
       propertyPath: m_Name
@@ -7280,7 +7570,7 @@ PrefabInstance:
     - target: {fileID: 4574019858948684618, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
       propertyPath: m_Name
-      value: I am a coin plz make me pretty (10)
+      value: CollectibleRam
       objectReference: {fileID: 0}
     - target: {fileID: 4589202074938693115, guid: 7257e91dfb1eb344fb4a8f195b1db4a5,
         type: 3}
@@ -113311,7 +113601,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.92982376, b: 0.92982376, a: 1}
   m_Origin: {x: -45, y: -25, z: 0}
   m_Size: {x: 189, y: 56, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -113345,6 +113635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020585117257839448, guid: 24139332bdac4e240a8cd29fe395b5aa,
+        type: 3}
+      propertyPath: damage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7814820140891486499, guid: 24139332bdac4e240a8cd29fe395b5aa,
         type: 3}
@@ -113415,3 +113710,4 @@ SceneRoots:
   - {fileID: 709732055}
   - {fileID: 2000677303}
   - {fileID: 1326814682}
+  - {fileID: 563346210}
