@@ -53,6 +53,15 @@ public class Health : MonoBehaviour
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
+
+        if (heartHealthBar != null)
+        {
+            heartHealthBar.UpdateHealth(currentHealth);
+        }
+        else
+        {
+            Debug.LogError("HeartHealthBar is not assigned!");
+        }
         if (currentHealth <= 0) 
         {
             killObject();

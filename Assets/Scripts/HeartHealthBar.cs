@@ -11,27 +11,6 @@ public class HeartHealthBar : MonoBehaviour
     public GameObject emptyHeartPrefab;
     private List<GameObject> hearts = new List<GameObject>();
     public float fadeInDuration = 0.5f; // Duration of the fade-in effect
-    public static HeartHealthBar Instance { get; private set; }
-
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        heartContainer = GameObject.Find("HeartContainer");
-        if (heartContainer == null)
-        {
-            Debug.LogError("HeartHealthBar: Failed to find HeartContainer in the scene.");
-        }
-    }
-
 
     public void InitializeHearts(int maxHealth)
     {
