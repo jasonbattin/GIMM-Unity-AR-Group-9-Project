@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 0f0bf437f40a35147ad1abb2cb4400b9
   - enabled: 1
+    path: Assets/Scenes/IntroVideo.unity
+    guid: 10ba56323ecf249429e54f693731eded
+  - enabled: 1
     path: Assets/Scenes/AR Camera Scene.unity
     guid: 908e8f5476d66704b9d3b530ecb549b8
   - enabled: 1
