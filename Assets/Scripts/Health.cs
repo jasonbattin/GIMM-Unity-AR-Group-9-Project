@@ -6,13 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth;
+    [Header("Health Values")]
+    [SerializeField] private int maxHealth = 3;
+    int currentHealth;
+    [Header("Health Bar")]
+    public HeartHealthBar heartHealthBar; // Public variable to assign in the editor
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        if (heartHealthBar != null)
+        {
+            heartHealthBar.InitializeHearts(currentHealth);
+        }
+        else
+        {
+            Debug.LogError("HeartHealthBar is not assigned!");
+        }
     }
 
     // Update is called once per frame
