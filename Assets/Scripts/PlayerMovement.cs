@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int dashPower;
     [SerializeField] private float jumpPower;
     [SerializeField] private float dashTime; //how long to dash
-    private float dashTimer = 0; //time player has been dashing
+    private float dashTimer = 10; //time player has been dashing
     private ButtonControls buttonControls;
     public enum CurrentState { idle, walking, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
@@ -57,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-               
+        dashTimer += Time.deltaTime;
+
         #region CAMERA LERP Y DAMPING
         if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
         {
@@ -178,10 +179,11 @@ public class PlayerMovement : MonoBehaviour
         //if hasnt double jumped yet, check for jump
         jumps += jump();
 
-        if (buttonControls.dashKey)
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
         {
             currentState = CurrentState.dash;
 
+            dashTimer = 0;
 
             return;
         }
@@ -213,10 +215,11 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (buttonControls.dashKey)
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
         {
             currentState = CurrentState.dash;
 
+            dashTimer = 0;
 
             return;
         }
@@ -229,12 +232,11 @@ public class PlayerMovement : MonoBehaviour
     private void dashState()
     {
         //if the player has been dashing for long enough, exit dash, otherwise continue dashing
-        dashTimer += Time.deltaTime;
         if (dashTimer < dashTime)
         {
             //dash will deactivate gravity
             rb.gravityScale = 0;
-            if (dirX >= 0) { 
+            if (IsFacingRight) { 
                 rb.velocity = new Vector2(1 * dashPower * baseSpeed, rb.velocity.y);
             }
             else
@@ -251,7 +253,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //reset to idle if time is up
             currentState = CurrentState.idle;
-            dashTimer = 0;
+            
         }
     }
 
@@ -281,11 +283,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //if shift is pressed, dash
-        if (buttonControls.dashKey)
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
         {
             currentState = CurrentState.dash;
-            
 
+            dashTimer = 0;
             return;
         }
 

@@ -7,6 +7,8 @@ public class ButtonControls : MonoBehaviour
     public bool jumpKey = false;
     public float dirX = 0;
     public Playercontrols controls; //controls for the player, used to get input
+    private float resetTimer;
+    private float resetDelay = 0.1f;
 
 
     private void Start()
@@ -38,5 +40,23 @@ public class ButtonControls : MonoBehaviour
             dashKey = false;
         };
         
+    }
+
+    private void Update()
+    {
+        
+        if (dashKey || jumpKey)
+        {
+            resetTimer += Time.deltaTime;
+            if (resetTimer >= resetDelay)
+            {
+                resetTimer = 0;
+                dashKey = false;
+                jumpKey = false;
+            }
+        }else
+        {
+            resetTimer = 0;
+        }
     }
 }

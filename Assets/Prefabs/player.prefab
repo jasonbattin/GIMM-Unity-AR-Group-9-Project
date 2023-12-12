@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 978241723847652500}
   - component: {fileID: 3994384178597536622}
   - component: {fileID: 6182360831718192213}
+  - component: {fileID: 2244815796575614974}
   - component: {fileID: 3525875031824306895}
   - component: {fileID: 7127272150987305887}
   - component: {fileID: 7884611415122872732}
   - component: {fileID: 781481514307376921}
   m_Layer: 0
-  m_Name: Player
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +120,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a9a78032680c845b4b4dae4b16a61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
+  maxHealth: 3
+  heartHealthBar: {fileID: 0}
+--- !u!114 &2244815796575614974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450658596225805215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb61c69e1c20614682de5c0255ec35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3525875031824306895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +149,6 @@ MonoBehaviour:
   dashKey: 0
   jumpKey: 0
   dirX: 0
-  notUsingInput: 0
 --- !u!50 &7127272150987305887
 Rigidbody2D:
   serializedVersion: 4
