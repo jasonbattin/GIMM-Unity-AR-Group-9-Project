@@ -152,8 +152,8 @@ Transform:
   m_GameObject: {fileID: 123870316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.5292, y: 1.4452, z: -2.6686032}
-  m_LocalScale: {x: 19.339214, y: 11.48067, z: 1}
+  m_LocalPosition: {x: -6.834, y: -70.825, z: -2.6686032}
+  m_LocalScale: {x: 2353.6348, y: 2594.7078, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 640130209}
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: ecd4d0b8319fbd443af265eb333d8816, type: 3}
   nextSceneName: 
+  nextSceneIndex: 1
 --- !u!82 &123870319
 AudioSource:
   m_ObjectHideFlags: 0
@@ -408,7 +409,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 128.38957
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -435,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 611026592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 677, y: 403, z: -10}
+  m_LocalPosition: {x: 648, y: 403, z: -10}
   m_LocalScale: {x: 0.6204, y: 0.5706, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,8 +518,8 @@ Canvas:
   m_GameObject: {fileID: 640130205}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 611026594}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -702,8 +703,8 @@ Transform:
   m_GameObject: {fileID: 1385159999}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.49, y: 2.1, z: -2.6686032}
-  m_LocalScale: {x: 5.798258, y: 4.7753434, z: 1}
+  m_LocalPosition: {x: 39.023, y: -10.378, z: -2.6686032}
+  m_LocalScale: {x: 1199.3223, y: 946.8457, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 640130209}
@@ -722,6 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: ecd4d0b8319fbd443af265eb333d8816, type: 3}
   nextSceneName: 
+  nextSceneIndex: 1
 --- !u!82 &1385160003
 AudioSource:
   m_ObjectHideFlags: 0
@@ -942,7 +944,7 @@ Transform:
   m_GameObject: {fileID: 1460869906}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 677, y: 404.1411, z: 0}
+  m_LocalPosition: {x: 648, y: 404.1411, z: 0}
   m_LocalScale: {x: 0.6204, y: 1, z: 0.5706}
   m_ConstrainProportionsScale: 0
   m_Children: []

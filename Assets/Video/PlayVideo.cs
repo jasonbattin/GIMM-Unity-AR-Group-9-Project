@@ -11,6 +11,7 @@ public class PlayVideo : MonoBehaviour
 
     private VideoPlayer videoPlayer;
     private AudioSource audioSource;
+    public int nextSceneIndex = 1;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class PlayVideo : MonoBehaviour
 
     void EndReached(VideoPlayer vp)
     {
-        SceneManager.LoadScene(2); // Load the next scene
+        SceneManager.LoadScene(nextSceneIndex); // Load the next scene by index
+
     }
 }
