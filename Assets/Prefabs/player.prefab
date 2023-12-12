@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 978241723847652500}
   - component: {fileID: 3994384178597536622}
   - component: {fileID: 6182360831718192213}
-  - component: {fileID: 2244815796575614974}
+  - component: {fileID: 8044758328048313193}
   - component: {fileID: 3525875031824306895}
   - component: {fileID: 7127272150987305887}
   - component: {fileID: 7884611415122872732}
   - component: {fileID: 781481514307376921}
   m_Layer: 0
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,10 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560d389418a6e214b839cc6e5925de1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 3
+  baseSpeed: 5
   dashPower: 5
   jumpPower: 2
-  dashTime: 0.5
+  dashTime: 0.3
   _cameraFollowObjectGameObject: {fileID: 0}
 --- !u!114 &6182360831718192213
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   heartHealthBar: {fileID: 0}
---- !u!114 &2244815796575614974
+--- !u!114 &8044758328048313193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
