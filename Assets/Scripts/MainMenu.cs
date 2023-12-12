@@ -1,4 +1,5 @@
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -6,7 +7,12 @@ using UnityEngine.Video;
 public class MainMenu : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // Assign this in the inspector with your VideoPlayer
+    [SerializeField] private TMP_Text highScoreText;
 
+    private void Start()
+    {
+        highScoreText.text = "High Score: " + Score.highScore;
+    }
 
     public void PlayGame(int scene)
     {
