@@ -11,6 +11,7 @@ public class DamagePlayer : MonoBehaviour
         {
             collision.gameObject.GetComponent<Health>().takeDamage(damage);
             collision.gameObject.GetComponent<TimeStop>().StopTime(0.0f, 10, 0.1f);
+            Handheld.Vibrate();
         }
     }
 }
