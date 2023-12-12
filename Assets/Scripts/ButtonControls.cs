@@ -6,40 +6,37 @@ public class ButtonControls : MonoBehaviour
     public bool dashKey = false;
     public bool jumpKey = false;
     public float dirX = 0;
-    public bool notUsingInput = false;
+    public Playercontrols controls; //controls for the player, used to get input
 
-    //horizontal movement
-    public void HorizontalButton(float dirX)
+
+    private void Start()
     {
-        this.dirX = dirX;
-    }
-
-    //if using normal input, process input
-    private void Update()
-    {
-
-        if (!notUsingInput)
+        controls = new Playercontrols();
+        controls.Enable();
+        //reading the values of the player movement direction for the players movement.
+        controls.Ground.Move.performed += moving =>
         {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            HorizontalButton(horizontal);
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                jumpKey = true;
-                Debug.Log("jump");
-            }
-            else
-            {
-                jumpKey = false;
-            }
-            if (Input.GetButtonDown("Dash"))
-            {
-                dashKey = true;
-            }
-            else
-            {
-                dashKey = false;
-            }
-        }
+            dirX = moving.ReadValue<float>();
+        };
+        //reading the value of the jump key for the players jump.
+        controls.Ground.Jump.performed += jump =>
+        {
+            jumpKey = true;
+        };
+        controls.Ground.Jump.canceled += jump =>
+        {
+            jumpKey = false;
+        };
+        
+        //reading the value of the dash key for the players dash.
+        controls.Ground.Dash.performed += dash =>
+        {
+            dashKey = true;
+        };
+        controls.Ground.Dash.canceled += dash =>
+        {
+            dashKey = false;
+        };
+        
     }
 }
