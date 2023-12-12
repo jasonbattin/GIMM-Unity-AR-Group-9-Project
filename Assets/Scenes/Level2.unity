@@ -3800,6 +3800,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24139332bdac4e240a8cd29fe395b5aa, type: 3}
+--- !u!114 &1124916725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7158974051211849456, guid: d094b3b537e1d9440bf6fe47ad3fd0fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2000677303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec8b8f0a5da93f40b12568b8dd0efce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1141613085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7750654102967547909, guid: c1462472d5ea7fa4691f73308e8d0c31,
@@ -6568,6 +6580,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 6182360831718192213, guid: 832a5ef8e6342084887aba4719b53fd9,
+        type: 3}
+      propertyPath: heartHealthBar
+      value: 
+      objectReference: {fileID: 1124916725}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
