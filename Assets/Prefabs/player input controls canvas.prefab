@@ -143,11 +143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: -1739.0001, y: 100}
-=======
   m_AnchoredPosition: {x: -100, y: 52.700012}
->>>>>>> josh-button-fixes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &6188437162316649465
@@ -282,11 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: -2139, y: 100}
-=======
   m_AnchoredPosition: {x: -500, y: 50}
->>>>>>> josh-button-fixes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &5420836744484255205
@@ -419,15 +411,9 @@ RectTransform:
   - {fileID: 6312501894247862852}
   m_Father: {fileID: 8652388784272794950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 100}
-=======
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 200}
->>>>>>> josh-button-fixes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &222372986004546098
@@ -1030,15 +1016,9 @@ RectTransform:
   - {fileID: 4470001142840184941}
   m_Father: {fileID: 8652388784272794950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -500, y: 100}
-=======
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 50}
->>>>>>> josh-button-fixes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &494985479343446217
