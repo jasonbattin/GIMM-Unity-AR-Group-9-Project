@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Video; // Include the video namespace
+using UnityEngine.Video;
 
 public class MainMenu : MonoBehaviour
 {
