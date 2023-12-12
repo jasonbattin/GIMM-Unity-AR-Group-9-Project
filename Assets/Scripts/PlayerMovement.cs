@@ -1,6 +1,6 @@
 using System.ComponentModel;
 using UnityEngine;
-using Vuforia;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,9 +23,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera")]
     private CameraFollowObject _cameraFollowObject; //a reference to the CameraFollowObject component on the camera follow object game object
     [SerializeField] private GameObject _cameraFollowObjectGameObject;  //a reference to the camera follow object game object
-    private float _fallSpeedYDampingChangeThreshold; //the threshold at which the camera will lerp the Y damping when the player is falling
+    private float _fallSpeedYDampingChangeThreshold; //the threshold at which the camera will lerp the Y damping when the player is falling    
 
-
+    private float jumpResetTimer = 0;
+    private float jumpResetTime = 0.2f;
 
     //here in case it needs to be accessed by animations or something
 
@@ -49,37 +50,14 @@ public class PlayerMovement : MonoBehaviour
         _cameraFollowObject = _cameraFollowObjectGameObject.GetComponent<CameraFollowObject>();
         _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
         #endregion
+
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
-
-        //retrieve horizontal axis
-        dirX = buttonControls.dirX;
-
-        //Flip(); // Used to flip sprite based on direction player is moving -CP
-
-        //switch to run corrisponding code depending on state
-        switch (currentState)
-        {
-          
-            case CurrentState.walking:
-            case CurrentState.idle:
-                idleAndWalkingState();
-                break;
-            case CurrentState.dash:
-                dashState();
-                break;
-            case CurrentState.jump:
-                jumpState();
-                break; 
-            case CurrentState.fall:
-                fallState();
-                break;
-        }
-
-
+               
         #region CAMERA LERP Y DAMPING
         if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
         {
@@ -99,6 +77,31 @@ public class PlayerMovement : MonoBehaviour
     // Called every physics update, used for movement
     private void FixedUpdate()
     {
+
+        //retrieve horizontal axis
+        dirX = buttonControls.dirX;
+
+        //Flip(); // Used to flip sprite based on direction player is moving -CP
+
+        //switch to run corrisponding code depending on state
+        switch (currentState)
+        {
+
+            case CurrentState.walking:
+            case CurrentState.idle:
+                idleAndWalkingState();
+                break;
+            case CurrentState.dash:
+                dashState();
+                break;
+            case CurrentState.jump:
+                jumpState();
+                break;
+            case CurrentState.fall:
+                fallState();
+                break;
+        }
+
         if (dirX != 0) //if were detecting movement, turn the player to face the direction they are moving
         {
             CheckDirectionToFace(dirX > 0);//only call the method if the player is moving left
@@ -142,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
     //checks if can jump, if so, jumps 
     private int jump()
     {
+        
         if (buttonControls.jumpKey && jumps < 2)
         {
             animator.SetBool("isRunning", false);
@@ -151,9 +155,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isFalling", false);
             currentState = CurrentState.jump;
             rb.velocity = new Vector2(rb.velocity.x, baseSpeed * jumpPower);
+            jumpResetTimer = 0;
             return 1;
         }
         return 0;
+
+
     }
 
     //fall state
@@ -171,6 +178,13 @@ public class PlayerMovement : MonoBehaviour
         //if hasnt double jumped yet, check for jump
         jumps += jump();
 
+        if (buttonControls.dashKey)
+        {
+            currentState = CurrentState.dash;
+
+
+            return;
+        }
     }
 
     //jump state
@@ -189,8 +203,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //if hasnt double jumped yet, check for jump
+        if(jumpResetTimer < jumpResetTime)
+        {
+            jumpResetTimer += Time.deltaTime;
+        }
+        else
+        {
+            jumps += jump();
+            
+        }
 
-        jumps += jump();
+        if (buttonControls.dashKey)
+        {
+            currentState = CurrentState.dash;
+
+
+            return;
+        }
+
 
     }
 
@@ -204,7 +234,13 @@ public class PlayerMovement : MonoBehaviour
         {
             //dash will deactivate gravity
             rb.gravityScale = 0;
-            rb.velocity = new Vector2(dirX * dashPower *baseSpeed, rb.velocity.y);
+            if (dirX >= 0) { 
+                rb.velocity = new Vector2(1 * dashPower * baseSpeed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-1 * dashPower * baseSpeed, rb.velocity.y);
+            }
             animator.SetBool("isRunning", false);
             animator.SetBool("isJumping", false);
             animator.SetBool("isIdle", false);
