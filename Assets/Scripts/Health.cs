@@ -6,13 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    private int currentHealth;
+    [Header("Health Values")]
+    [SerializeField] private int maxHealth = 3;
+    int currentHealth;
+    [Header("Health Bar")]
+    public HeartHealthBar heartHealthBar; // Public variable to assign in the editor
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        if (heartHealthBar != null)
+        {
+            heartHealthBar.InitializeHearts(currentHealth);
+        }
+        else
+        {
+            Debug.LogError("HeartHealthBar is not assigned!");
+        }
     }
 
     // Update is called once per frame
@@ -22,16 +32,17 @@ public class Health : MonoBehaviour
         {
             killObject();
         }
-        if(transform.position.y < -10)
+        if(transform.position.y < -40)
         {
             killObject();
+            
         }
     }
 
     // kill object
     private void killObject()
     {
-        if (gameObject.name.Equals("Player"))
+        if (gameObject.tag.Equals("Player"))
         {
             Score.gameOver();
         }
@@ -42,6 +53,15 @@ public class Health : MonoBehaviour
     public void takeDamage(int damage)
     {
         currentHealth -= damage;
+
+        if (heartHealthBar != null)
+        {
+            heartHealthBar.UpdateHealth(currentHealth);
+        }
+        else
+        {
+            Debug.LogError("HeartHealthBar is not assigned!");
+        }
         if (currentHealth <= 0) 
         {
             killObject();

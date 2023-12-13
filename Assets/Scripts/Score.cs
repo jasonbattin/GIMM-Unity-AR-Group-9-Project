@@ -6,22 +6,23 @@ public class Score : MonoBehaviour
 {
     public static int highScore;
     public static int currentScore;
-    
+    public static string returnScene;
+
     //ends game
     public static void gameOver()
     {
+        returnScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Game Over");
+        Debug.Log(highScore);
+
     }
 
-    //reset current Score
-    public static void ResetScore()
+    //updates score
+    public static void updateScore(int score)
     {
-        currentScore = 0;
+        currentScore += score;
+        if (highScore < currentScore) { highScore = currentScore; }
+
     }
 
-    //if current score is high score, set high score as current score
-    private void Update()
-    {
-        if (highScore > currentScore) {  highScore = currentScore; }
-    }
 }

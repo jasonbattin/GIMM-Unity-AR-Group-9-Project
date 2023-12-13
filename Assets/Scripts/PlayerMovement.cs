@@ -1,28 +1,32 @@
 using System.ComponentModel;
 using UnityEngine;
-using Vuforia;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Animator animator;
+    private Rigidbody2D rb;
     [SerializeField] private int baseSpeed;
     [SerializeField] private int dashPower;
+    [SerializeField] private float jumpPower;
     [SerializeField] private float dashTime; //how long to dash
-    private float dashTimer; //time player has been dashing
-    public enum CurrentState { idle, walkingLeft, walkingRight, dash, jump, fall};
+    private float dashTimer = 10; //time player has been dashing
+    private ButtonControls buttonControls;
+    public enum CurrentState { idle, walking, dash, jump, fall};
     private CurrentState currentState = CurrentState.idle;
     
     private float dirX; // Horrizontal movement input direction -1 = left, 1 = right, 0 = none.    just checking if i understand this correctly?-jason
     private int jumps;
     public bool IsFacingRight { get; private set; }  //avaiable for use in animations or other things that need players direction (im currently using it for cinemachine-jason)
-
+       
 
     [Header("Camera")]
     private CameraFollowObject _cameraFollowObject; //a reference to the CameraFollowObject component on the camera follow object game object
     [SerializeField] private GameObject _cameraFollowObjectGameObject;  //a reference to the camera follow object game object
-    private float _fallSpeedYDampingChangeThreshold; //the threshold at which the camera will lerp the Y damping when the player is falling
+    private float _fallSpeedYDampingChangeThreshold; //the threshold at which the camera will lerp the Y damping when the player is falling    
 
-
+    private float jumpResetTimer = 0;
+    private float jumpResetTime = 0.2f;
 
     //here in case it needs to be accessed by animations or something
 
@@ -35,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        buttonControls = GetComponent<ButtonControls>();
 
         // Set the flag indicating the start direction of the player 
         IsFacingRight = true;
@@ -44,33 +50,14 @@ public class PlayerMovement : MonoBehaviour
         _cameraFollowObject = _cameraFollowObjectGameObject.GetComponent<CameraFollowObject>();
         _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
         #endregion
+
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
-
-        //retrieve horizontal axis
-        dirX = Input.GetAxisRaw("Horizontal");
-
-        //switch to run corrisponding code depending on state
-        switch (currentState)
-        {
-            case CurrentState.walkingLeft:
-            case CurrentState.walkingRight:
-            case CurrentState.idle:
-                idleAndWalkingState();
-                break;
-            case CurrentState.dash:
-                dashState();
-                break;
-            case CurrentState.jump:
-                jumpState();
-                break; 
-            case CurrentState.fall:
-                fallState();
-                break;
-        }
+        dashTimer += Time.deltaTime;
 
         #region CAMERA LERP Y DAMPING
         if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
@@ -91,9 +78,42 @@ public class PlayerMovement : MonoBehaviour
     // Called every physics update, used for movement
     private void FixedUpdate()
     {
+
+        //retrieve horizontal axis
+        dirX = buttonControls.dirX;
+
+        //Flip(); // Used to flip sprite based on direction player is moving -CP
+
+        //switch to run corrisponding code depending on state
+        switch (currentState)
+        {
+
+            case CurrentState.walking:
+            case CurrentState.idle:
+                idleAndWalkingState();
+                break;
+            case CurrentState.dash:
+                dashState();
+                break;
+            case CurrentState.jump:
+                jumpState();
+                break;
+            case CurrentState.fall:
+                fallState();
+                break;
+        }
+
         if (dirX != 0) //if were detecting movement, turn the player to face the direction they are moving
         {
             CheckDirectionToFace(dirX > 0);//only call the method if the player is moving left
+        }
+
+
+        //moved to fixed update to allow for users to move while jumping/falling
+        //calculate horizontal velocity
+        if (currentState != CurrentState.dash) {
+            rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+
         }
     }
     public void CheckDirectionToFace(bool isMovingRight)//determins if the player is moving left or right
@@ -126,13 +146,22 @@ public class PlayerMovement : MonoBehaviour
     //checks if can jump, if so, jumps 
     private int jump()
     {
-        if (Input.GetButtonDown("Jump") && jumps < 2)
+        
+        if (buttonControls.jumpKey && jumps < 2)
         {
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
             currentState = CurrentState.jump;
-            rb.velocity = new Vector2(dirX * baseSpeed, baseSpeed * 2);
+            rb.velocity = new Vector2(rb.velocity.x, baseSpeed * jumpPower);
+            jumpResetTimer = 0;
             return 1;
         }
         return 0;
+
+
     }
 
     //fall state
@@ -150,6 +179,14 @@ public class PlayerMovement : MonoBehaviour
         //if hasnt double jumped yet, check for jump
         jumps += jump();
 
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
+        {
+            currentState = CurrentState.dash;
+
+            dashTimer = 0;
+
+            return;
+        }
     }
 
     //jump state
@@ -160,11 +197,33 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < -0.01f)
         {
             currentState = CurrentState.fall;
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", true);
         }
 
         //if hasnt double jumped yet, check for jump
+        if(jumpResetTimer < jumpResetTime)
+        {
+            jumpResetTimer += Time.deltaTime;
+        }
+        else
+        {
+            jumps += jump();
+            
+        }
 
-        jumps += jump();
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
+        {
+            currentState = CurrentState.dash;
+
+            dashTimer = 0;
+
+            return;
+        }
+
 
     }
 
@@ -173,18 +232,28 @@ public class PlayerMovement : MonoBehaviour
     private void dashState()
     {
         //if the player has been dashing for long enough, exit dash, otherwise continue dashing
-        dashTimer += Time.deltaTime;
         if (dashTimer < dashTime)
         {
             //dash will deactivate gravity
             rb.gravityScale = 0;
-            rb.velocity = new Vector2(dirX * baseSpeed * dashPower, rb.velocity.y);
+            if (IsFacingRight) { 
+                rb.velocity = new Vector2(1 * dashPower * baseSpeed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-1 * dashPower * baseSpeed, rb.velocity.y);
+            }
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", true);
+            animator.SetBool("isFalling", false);
         }
         else
         {
             //reset to idle if time is up
             currentState = CurrentState.idle;
-            dashTimer = 0;
+            
         }
     }
 
@@ -214,9 +283,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //if shift is pressed, dash
-        if (Input.GetKeyDown("left shift"))
+        if (buttonControls.dashKey && dashTimer > dashTime * 4)
         {
             currentState = CurrentState.dash;
+
+            dashTimer = 0;
             return;
         }
 
@@ -227,19 +298,41 @@ public class PlayerMovement : MonoBehaviour
     private void horizontalMovement()
     {
         //base walking/idle on dirX
-        if (dirX > 0)
-        {
-            currentState = CurrentState.walkingRight;
-        }
-        else if (dirX < 0)
-        {
-            currentState = CurrentState.walkingLeft;
+        if (dirX > .1f || dirX < -.1f)
+        { 
+            currentState = CurrentState.walking;
+
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
+
+
         }
         else
         {
             currentState = CurrentState.idle;
+
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isDashing", false);
+            animator.SetBool("isFalling", false);
+
         }
-        //calculate horizontal velocity
-        rb.velocity = new Vector2(dirX * baseSpeed, rb.velocity.y);
+
+
     }
+    /* public void Flip()  // Used to flip sprite based on direction player is moving -CP
+     {
+
+         if (IsFacingRight && dirX < 0f || !IsFacingRight && dirX > 0f)
+         {
+             Vector3 localScale = transform.localScale;
+             IsFacingRight = !IsFacingRight;
+             localScale.x *= -1f;
+             transform.localScale = localScale;
+         }
+     }*/
 }
