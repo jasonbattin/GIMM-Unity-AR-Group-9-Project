@@ -10,7 +10,7 @@ public class DamagePlayer : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             collision.gameObject.GetComponent<Health>().takeDamage(damage);
-            collision.gameObject.GetComponent<TimeStop>().StopTime(0.0f, 10, 0.1f);
+            //collision.gameObject.GetComponent<TimeStop>().StopTime(0.0f, 10, 0.1f);
             Handheld.Vibrate();
         }
     }
